@@ -55,7 +55,7 @@ digantara_star_tracker_final/
 The implementation follows a five-step pipeline for robust star identification:
 
 ### Step A1: Star Catalog Generation
-- Downloads/generates star catalog for the given field of view
+- Generates a synthetic star catalog for the given field of view
 - Uses RA, DEC, and FoV from sensor metadata
 - Filters stars by magnitude (< 12.0) for visibility
 - **Implementation**: Lines 80-135 in `star_matcher.py`
@@ -92,9 +92,9 @@ Successfully processed all three sensors with the following results:
 
 | Sensor | Image Size | Field of View | Matches | RMS Error | Status |
 |--------|-----------|---------------|---------|-----------|--------|
-| 1 | 6576×4384 | 2.03°×1.41° | 26 | 3559.9 px | ✅ Success |
-| 2 | 1024×1024 | 0.43°×0.43° | 19 | 3643.3 px | ✅ Success |
-| 3 | 13400×9528 | 6.73°×4.79° | 60 | 8852.0 px | ✅ Success |
+| 1 | 6576×4384 | 2.03°×1.41° | 26 | 3445.2 px | ✅ Success |
+| 2 | 1024×1024 | 0.43°×0.43° | 19 | 3662.8 px | ✅ Success |
+| 3 | 13400×9528 | 6.73°×4.79° | 60 | 9099.5 px | ✅ Success |
 
 ### Key Achievements
 - ✅ All 3 sensors processed successfully
@@ -102,6 +102,16 @@ Successfully processed all three sensors with the following results:
 - ✅ Visualization plots showing matched stars and residuals
 - ✅ Orientation refined from initial estimates (corrections of 0.3° - 0.9°)
 - ✅ Sufficient matches for reliable orientation (19-60 stars per sensor)
+
+---
+
+### Estimated Orientation
+
+| Sensor | RA (deg) | DEC (deg) | ROLL (deg) |
+|------|---------|----------|-----------|
+| 1 | 214.6743 | -48.1023 | 138.8795 |
+| 2 | 101.5234 | -48.5910 | 70.3176 |
+| 3 | 16.5802 | 13.9939 | 82.7304 |
 
 ---
 
@@ -261,6 +271,7 @@ This submission was created as part of the Digantara Research Image Processing E
 
 **Date**: February 2026  
 **Assessment**: Star Tracker Algorithm for Astrometric Calibration
+**Owner**: Anurag Gupta
 
 ---
 
